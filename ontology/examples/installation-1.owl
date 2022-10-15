@@ -1,0 +1,180 @@
+@prefix : <https://semantix.siemens-bt.net/sites/ganeshhome/renewables#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://semantix.siemens-bt.net/sites/ganeshhome/renewables> .
+
+<https://semantix.siemens-bt.net/sites/ganeshhome/renewables> rdf:type owl:Ontology ;
+                                                               owl:imports <https://semantix.siemens-bt.net/ontologies/solarpower> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#hasModule
+<https://semantix.siemens-bt.net/ontologies/solarpower#hasModule> rdf:type owl:AnnotationProperty .
+
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#hasTerminal
+<https://semantix.siemens-bt.net/ontologies/solarpower#hasTerminal> rdf:type owl:AnnotationProperty .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#hasMeasurement
+:hasMeasurement rdf:type owl:AnnotationProperty .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#hasMeasurementUnits
+:hasMeasurementUnits rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#ElectricalWire
+<https://semantix.siemens-bt.net/ontologies/solarpower#ElectricalWire> rdf:type owl:Class .
+
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#LeadAcidBattery
+<https://semantix.siemens-bt.net/ontologies/solarpower#LeadAcidBattery> rdf:type owl:Class .
+
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#PVArray
+<https://semantix.siemens-bt.net/ontologies/solarpower#PVArray> rdf:type owl:Class .
+
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#PVModule
+<https://semantix.siemens-bt.net/ontologies/solarpower#PVModule> rdf:type owl:Class .
+
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#PWMController
+<https://semantix.siemens-bt.net/ontologies/solarpower#PWMController> rdf:type owl:Class .
+
+
+###  https://semantix.siemens-bt.net/ontologies/solarpower#Terminal
+<https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> rdf:type owl:Class .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#Instance
+:Instance rdf:type owl:Class .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#ProductSpecification
+:ProductSpecification rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#battery_sp1
+:battery_sp1 rdf:type owl:NamedIndividual ,
+                      <https://semantix.siemens-bt.net/ontologies/solarpower#LeadAcidBattery> ;
+             <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasProductSpecification> :greencell_AGM06 ;
+             <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasTerminal> :term_bat1_negative ,
+                                                                                                       :term_bat1_positive .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#charge
+:charge rdf:type owl:NamedIndividual .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#chargecon_sp1
+:chargecon_sp1 rdf:type owl:NamedIndividual ,
+                        <https://semantix.siemens-bt.net/ontologies/solarpower#PWMController> ;
+               <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasTerminal> :term_con1_bat_negative ,
+                                                                                                         :term_con1_bat_positive .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#greencell_AGM06
+:greencell_AGM06 rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#LeadAcidBattery> ,
+                          :ProductSpecification ;
+                 <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#batteryCapacity> 9 ;
+                 <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#batteryVoltageNominal> 12 .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#pvarray_1
+:pvarray_1 rdf:type owl:NamedIndividual ,
+                    <https://semantix.siemens-bt.net/ontologies/solarpower#PVArray> ;
+           <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasModule> :pvmodule_sp1 ;
+           <https://semantix.siemens-bt.net/ontologies/solarpower#hasModule> :pvmodule_sp1 .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#pvmodule_sp1
+:pvmodule_sp1 rdf:type owl:NamedIndividual ,
+                       <https://semantix.siemens-bt.net/ontologies/solarpower#PVModule> ;
+              <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasProductSpecification> :victron_SPM040401200 ;
+              <https://semantix.siemens-bt.net/ontologies/solarpower#hasTerminal> :term_sp1_out_negative ,
+                                                                                  :term_sp1_out_postive .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#term_bat1_negative
+:term_bat1_negative rdf:type owl:NamedIndividual ,
+                             <https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> ;
+                    <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasPolarity> <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#negative> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#term_bat1_positive
+:term_bat1_positive rdf:type owl:NamedIndividual ,
+                             <https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> ;
+                    <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasPolarity> <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#positive> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#term_con1_bat_negative
+:term_con1_bat_negative rdf:type owl:NamedIndividual ,
+                                 <https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> ;
+                        <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#connectedTo> :term_bat1_negative ;
+                        <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasPolarity> <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#negative> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#term_con1_bat_positive
+:term_con1_bat_positive rdf:type owl:NamedIndividual ,
+                                 <https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> ;
+                        <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#connectedTo> :term_bat1_positive ;
+                        <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasPolarity> <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#positive> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#term_controller_sp_input_positive
+:term_controller_sp_input_positive rdf:type owl:NamedIndividual ,
+                                            <https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#term_sp1_out_negative
+:term_sp1_out_negative rdf:type owl:NamedIndividual ,
+                                <https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#term_sp1_out_postive
+:term_sp1_out_postive rdf:type owl:NamedIndividual ,
+                               <https://semantix.siemens-bt.net/ontologies/solarpower#Terminal> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#victron_SPM040401200
+:victron_SPM040401200 rdf:type owl:NamedIndividual ,
+                               <https://semantix.siemens-bt.net/ontologies/solarpower#PVModule> ,
+                               :ProductSpecification ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#hasPVCrystalType> <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#monocrystalline> ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvMppCurrent> 2.19 ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvMppVoltage> 18.3 ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvOpenCircuitVoltage> 22.45 ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvRatedPower> 40 ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvShortCircuitCurrent> 2.4 ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvTemperatureCoefficientIsc> 0.04 ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvTemperatureCoefficientMPP> -0.45 ;
+                      <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#pvTemperatureCoefficientVoc> -0.35 .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#wire_sp1_negative
+:wire_sp1_negative rdf:type owl:NamedIndividual ,
+                            <https://semantix.siemens-bt.net/ontologies/solarpower#ElectricalWire> .
+
+
+###  https://semantix.siemens-bt.net/sites/ganeshhome/renewables#wire_sp1_postive
+:wire_sp1_postive rdf:type owl:NamedIndividual ,
+                           <https://semantix.siemens-bt.net/ontologies/solarpower#ElectricalWire> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
