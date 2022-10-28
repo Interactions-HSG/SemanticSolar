@@ -1,0 +1,2740 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pvont#"
+     xml:base="http://www.semanticweb.org/pvont"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:pvont="http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:pvont1="https://purl.org/pvont#">
+    <owl:Ontology rdf:about="https://purl.org/pvont"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasMeasurement -->
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/pvont#hasMeasurement"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasMeasurementUnits -->
+
+    <owl:AnnotationProperty rdf:about="https://purl.org/pvont#hasMeasurementUnits"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/pvont#pvAvailability -->
+
+    <rdfs:Datatype rdf:about="https://purl.org/pvont#pvAvailability">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/pvont#connectedTo -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#connectedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasComponent"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasConductorMaterial -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasConductorMaterial"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasModule -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasModule">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasPVCrystalType -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasPVCrystalType"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasPart"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasPolarity -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasPolarity">
+        <rdfs:domain rdf:resource="https://purl.org/pvont#Terminal"/>
+        <rdfs:range rdf:resource="https://purl.org/pvont#Polarity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasProductSpecification -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasProductSpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasTag -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasTag"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasTerminal -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasTerminal">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasTerminalBlock -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasTerminalBlock">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasTerminalType -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#hasTerminalType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#inParallelTo -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#inParallelTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#inSeriesWith -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#inSeriesWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#isPartOf"/>
+    
+
+
+    <!-- https://purl.org/pvont#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#locatedIn"/>
+    
+
+
+    <!-- https://purl.org/pvont#representedBy -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#representedBy">
+        <owl:inverseOf rdf:resource="https://purl.org/pvont#represents"/>
+        <rdfs:range rdf:resource="https://purl.org/pvont#DataPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/pvont#represents -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#represents"/>
+    
+
+
+    <!-- https://purl.org/pvont#usesFunction -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#usesFunction"/>
+    
+
+
+    <!-- https://purl.org/pvont#usingWire -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/pvont#usingWire">
+        <rdfs:range rdf:resource="https://purl.org/pvont#ElectricalWire"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/pvont#azimuth -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#azimuth">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryAvailableCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryAvailableCapacity">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryCapacity">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <pvont1:hasMeasurement rdf:resource="https://purl.org/pvont#charge"/>
+        <pvont1:hasMeasurementUnits rdf:resource="https://purl.org/pvont#ampere-hour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryChargeFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryChargeFactor">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>A number representing the time in hours during which a battery can be charged at a constant current without damage to the battery. Usually expressed in relation to the total battery capacity, i.e., C/5 indicates a charge factor of 5 hours. Related to charge rate.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryChargeRate -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryChargeRate">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The current applied to a cell or battery to restore its available capacity. This rate is commonly normalized by a charge control device with respect to the rated capacity of the cell or battery.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryCurrentCharging -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryCurrentCharging">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryCurrentMaximum -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryCurrentMaximum">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryCycleLife -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryCycleLife">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryDepthOfDischarge -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryDepthOfDischarge">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The ampere-hours removed from a fully charged cell or battery, expressed as a percentage of rated capacity. For example, the removal of 25 ampere-hours from a fully charged 100 ampere-hours rated cell results in a 25% depth of discharge. Under certain conditions, such as discharge rates lower than that used to rate the cell, depth of discharge can exceed 100%.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryDischargeFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryDischargeFactor">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>A number equivalent to the time in hours during which a battery is discharged at constant current usually expressed as a percentage of the total battery capacity, i.e., C/5 indicates a discharge factor of 5 hours. Related to discharge rate.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryDischargeRate -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryDischargeRate">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The rate, usually expressed in amperes or time, at which electrical current is taken from the battery.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryEnergyCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryEnergyCapacity">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The total energy available, expressed in watt-hours (kilowatt-hours), which can be withdrawn from a fully charged cell or battery. The energy capacity of a given cell varies with temperature, rate, age, and cut-off voltage. This term is more common to system designers than it is to the battery industry where capacity usually refers to ampere-hours.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryEnergyDensity -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryEnergyDensity">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryFloatCharge -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryFloatCharge">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The voltage required to counteract the self-discharge of the battery at a certain temperature.</rdfs:comment>
+        <rdfs:label>Float charge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryFloatLife -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryFloatLife">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The number of years that a battery can keep its stated capacity when it is kept at float charge.</rdfs:comment>
+        <rdfs:label>Float life</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryLife -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryLife">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The period during which a cell or battery is capable of operating above a specified capacity or efficiency performance level. Life may be measured in cycles and/or years, depending on the type of service for which the cell or battery is intended.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryPowerDensity -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryPowerDensity">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batterySpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batterySpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#batteryStateOfCharge -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryStateOfCharge">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The available capacity remaining in the battery, expressed as a percentage of the rated capacity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryTemperatureMaximum -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryTemperatureMaximum">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryTemperatureMinimum -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryTemperatureMinimum">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryVoltageCharging -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryVoltageCharging">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryVoltageMaximum -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryVoltageMaximum">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryVoltageMinimum -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryVoltageMinimum">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryVoltageNominal -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryVoltageNominal">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#batteryWetShelfLife -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#batteryWetShelfLife">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#batterySpecification"/>
+        <rdfs:comment>The period of time that a charged battery, when filled with electrolyte, can remain unused before dropping below a specified level of performance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#controllerSpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#controllerSpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#cuttoffVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#cuttoffVoltage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#depth -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#depth">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#designMonth -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#designMonth">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The month having the combination of insolation and load that requires the maximum energy from the photovoltaic array.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#designSpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#designSpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#dutyCycle -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#dutyCycle">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The ratio of active time to total time. Used to describe the operating regime of appliances or loads in photovoltaic systems.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#dutyRating -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#dutyRating">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+        <rdfs:comment>The amount of time an inverter (power conditioning unit) can produce at full rated power.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#elevation -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#elevation">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#frequencyVariation -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#frequencyVariation">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#geometrySpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#geometrySpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#hasActivePower -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasActivePower">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasBaseLoad -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasBaseLoad">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasCapacityFactort -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasCapacityFactort">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The ratio of the average load on (or power output of) an electricity generating unit or system to the capacity rating of the unit or system over a specified period of time.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasConductorType -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasConductorType">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#wiringSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasContactResistance -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasContactResistance">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#wiringSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasCores -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasCores">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#wiringSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasCurrent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasCurrent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasInsulationType -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasInsulationType">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#wiringSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasLocationAltitude -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasLocationAltitude">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#locationSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasLocationLatitude -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasLocationLatitude">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#locationSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasLocationLongitude -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasLocationLongitude">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#locationSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasPhaseAngle -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasPhaseAngle">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasPhaseIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasPhaseIdentifier">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasReactivePower -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasReactivePower">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasTotalPower -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasTotalPower">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasVoltage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#hasWireGuage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#hasWireGuage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#wiringSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#height -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#height">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#loadCurrent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#loadCurrent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#loadResistance -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#loadResistance">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#locationSpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#locationSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#lowVoltageDisconnect -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#lowVoltageDisconnect">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+        <rdfs:comment>The voltage at which a charge controller will disconnect the load from the batteries to prevent over-discharging.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#lowVoltageDisconnectHysteresis -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#lowVoltageDisconnectHysteresis">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+        <rdfs:comment>The voltage difference between the low voltage disconnect set point and the voltage at which the load will be reconnected.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#lowVoltageWarningLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#lowVoltageWarningLevel">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#lowVotageCuttoff -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#lowVotageCuttoff">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+        <rdfs:comment>The voltage level at which a charge controller will disconnect the load from the battery.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#manufacturerModelName -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#manufacturerModelName">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#productSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#manufacturerName -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#manufacturerName">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#productSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#nominalVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#nominalVoltage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#productSpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#productSpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#projectedArea -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#projectedArea">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The net south-facing glazing area projected on a vertical plane.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvAvailability -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvAvailability">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvConversionEfficiency -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvConversionEfficiency">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvFillFactor -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvFillFactor">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+        <rdfs:comment>The ratio of a photovoltaic cell&apos;s actual power to its power if both current and voltage were at their maxima. A key characteristic in evaluating cell performance.</rdfs:comment>
+        <rdfs:label>Fill factor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvMaxSurfaceLoading -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvMaxSurfaceLoading">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvModuleLife80percent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvModuleLife80percent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvModuleLife90percent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvModuleLife90percent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvMppCurrent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvMppCurrent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvMppVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvMppVoltage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvNormalOperatingCellTemperature -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvNormalOperatingCellTemperature">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+        <rdfs:comment>(NOCT) — The estimated temperature of a photovoltaic module when operating under 800 w/m2 irradiance, 20°C ambient temperature and wind speed of 1 meter per second. NOCT is used to estimate the nominal operating temperature of a module in its working environment.</rdfs:comment>
+        <rdfs:label>NOCT</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvNumberOfCells -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvNumberOfCells">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvOpenCircuitVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvOpenCircuitVoltage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvOutputTolerance -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvOutputTolerance">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvQuantumEfficiency -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvQuantumEfficiency">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+        <rdfs:comment>The ratio of the number of charge carriers collected by a photovoltaic cell to the number of photons of a given energy shining on the cell. Quantum efficiency relates to the response of a solar cell to the different wavelengths in the spectrum of light shining on the cell. QE is given as a function of either wavelength or energy. Optimally, a solar cell should generate considerable electrical current for wavelengths that are most abundant in sunlight.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvRatedModuleCurrent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvRatedModuleCurrent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+        <rdfs:comment>The current output of a photovoltaic module measured at standard test conditions of 1,000 w/m2 and 25°C cell temperature.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvRatedPower -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvRatedPower">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvShortCircuitCurrent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvShortCircuitCurrent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvSpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvSpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#pvTemperatureCoefficientIsc -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvTemperatureCoefficientIsc">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvTemperatureCoefficientMPP -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvTemperatureCoefficientMPP">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvTemperatureCoefficientVoc -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvTemperatureCoefficientVoc">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvTemperatureRangeMax -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvTemperatureRangeMax">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#pvTemperatureRangeMin -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#pvTemperatureRangeMin">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#pvSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#rampRate -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#rampRate">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The ability of a generating unit to change its output over some unit of time, often measured in MW/min.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#ratedCurrent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#ratedCurrent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#ratedPower -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#ratedPower">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#ratedVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#ratedVoltage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#standbyCurrent -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#standbyCurrent">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#surgeCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#surgeCapacity">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The maximum power, usually 3-5 times the rated power, that can be provided over a short time.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#systemAvailability -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#systemAvailability">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The percentage of time (usually expressed in hours per year) when a photovoltaic system will be able to fully meet the load demand.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#systemOperatingVoltage -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#systemOperatingVoltage">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The photovoltaic array output voltage under load. The system operating voltage is dependent on the load or batteries connected to the output terminals.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#temperatureCompensation -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#temperatureCompensation">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#controllerSpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#tiltAngle -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#tiltAngle">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+        <rdfs:comment>The angle at which a photovoltaic array is set to face the sun relative to a horizontal position. The tilt angle can be set or adjusted to maximize seasonal or annual energy collection.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#totalACLoadDemand -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#totalACLoadDemand">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#designSpecification"/>
+        <rdfs:comment>The sum of the alternating current loads. This value is important when selecting an inverter.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#width -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#width">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purl.org/pvont#wiringSpecification -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#wiringSpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#zenithAngle -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/pvont#zenithAngle">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/pvont#geometrySpecification"/>
+        <rdfs:comment>the angle between the direction of interest (of the sun, for example) and the zenith (directly overhead).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/pvont#ActiveComponent -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ActiveComponent">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Actuator -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Actuator">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CPSDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Ammeter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Ammeter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#MeasurementDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Battery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Battery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#BatteryOperationState -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#BatteryOperationState">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#BlockingDiode -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#BlockingDiode">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Diode"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#BypassDiode -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#BypassDiode">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Diode"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#CPSDevice -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#CPSDevice">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Capacitor -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Capacitor">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#CaptiveElectrolyteBattery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#CaptiveElectrolyteBattery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Battery"/>
+        <rdfs:comment>A battery having an immobilized electrolyte (gelled or absorbed in a material).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#CharactersticCurve -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#CharactersticCurve"/>
+    
+
+
+    <!-- https://purl.org/pvont#ChargeControlStrategy -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ChargeControlStrategy">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#ChargeController -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ChargeController">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+        <rdfs:comment>A component of a photovoltaic system that controls the flow of current to and from the battery to protect it from over-charge and over-discharge. The charge controller may also indicate the system operational status.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#CircuitType -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#CircuitType">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Component -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Component">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/pvont#hasTerminal"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/pvont#Terminal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Concentrator -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Concentrator">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+        <rdfs:comment>A photovoltaic module, which includes optical components such as lenses (Fresnel lens) to direct and concentrate sunlight onto a solar cell of smaller area. Most concentrator arrays must directly face or track the sun. They can increase the power flux of sunlight hundreds of times.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#ConductorMaterialType -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ConductorMaterialType">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Converter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Converter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#CurrentDirection -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#CurrentDirection">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#CurvePoint -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#CurvePoint"/>
+    
+
+
+    <!-- https://purl.org/pvont#DataPoint -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#DataPoint"/>
+    
+
+
+    <!-- https://purl.org/pvont#Diode -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Diode">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#DoubleAxisTracker -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#DoubleAxisTracker">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#SunTracker"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#EdgeDevice -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#EdgeDevice">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CPSDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#ElectricalCircuit -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ElectricalCircuit">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#ElectricalTerm -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ElectricalTerm"/>
+    
+
+
+    <!-- https://purl.org/pvont#ElectricalWire -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ElectricalWire">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Filter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Filter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Function -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Function"/>
+    
+
+
+    <!-- https://purl.org/pvont#Fuse -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Fuse">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#FuseType -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#FuseType">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#IOModule -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#IOModule">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CPSDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#IVCurve -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#IVCurve">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CharactersticCurve"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Inductor -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Inductor">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Inverter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Inverter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#LeadAcidBattery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#LeadAcidBattery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#LiquidElectrolyteBattery"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#LineCommutatedInverter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#LineCommutatedInverter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Inverter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#LiquidElectrolyteBattery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#LiquidElectrolyteBattery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Battery"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#LithiumIonBattery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#LithiumIonBattery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Battery"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#LithiumPolymerBattery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#LithiumPolymerBattery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Battery"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Load -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Load">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#LoadForecast -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#LoadForecast">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CharactersticCurve"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#LoadType -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#LoadType">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Location -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Location"/>
+    
+
+
+    <!-- https://purl.org/pvont#MPPTController -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MPPTController">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ChargeController"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#MaintenanceFreeBattery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MaintenanceFreeBattery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Battery"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#MaximumPowerPoint -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MaximumPowerPoint">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CurvePoint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#MaximumPowerTracking -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MaximumPowerTracking">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Measurement -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Measurement">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#MeasurementDevice -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MeasurementDevice">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#MeasurementUnits -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MeasurementUnits">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#MultiCoreElectricalWire -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MultiCoreElectricalWire">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalWire"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#MultiStageController -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#MultiStageController">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ChargeController"/>
+        <rdfs:comment>A charging controller unit that allows different charging currents as the battery nears full state_of_charge.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#NickelCadmiumBattery -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#NickelCadmiumBattery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Battery"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PVArray -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PVArray">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PVAttributes -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PVAttributes">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PVCell -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PVCell">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PVCurve -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PVCurve">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CharactersticCurve"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PVModule -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PVModule">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PWMController -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PWMController">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ChargeController"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PanelLocation -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PanelLocation">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PassiveComponent -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PassiveComponent">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#PeakDemandLimiting -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#PeakDemandLimiting">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Polarity -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Polarity">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Powermeter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Powermeter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#MeasurementDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#ProductSpecification -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#ProductSpecification"/>
+    
+
+
+    <!-- https://purl.org/pvont#Pyranometer -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Pyranometer">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#MeasurementDevice"/>
+        <rdfs:comment>An instrument used for measuring global solar irradiance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Pyrheliometer -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Pyrheliometer">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#MeasurementDevice"/>
+        <rdfs:comment>An instrument used for measuring direct beam solar irradiance. Uses an aperture of 5.7° to transcribe the solar disc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Relay -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Relay">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Switch"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Resistor -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Resistor">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Scheduling -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Scheduling">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Sensor -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Sensor">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#CPSDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Shunt -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Shunt">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#SingleAxisTracker -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#SingleAxisTracker">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#SunTracker"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Subsystem -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Subsystem"/>
+    
+
+
+    <!-- https://purl.org/pvont#SunTracker -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#SunTracker">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ActiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Switch -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Switch">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Tag -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Tag"/>
+    
+
+
+    <!-- https://purl.org/pvont#TemperatureSensor -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#MeasurementDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Terminal -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Terminal">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/pvont#connectedTo"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/pvont#Terminal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/pvont#hasTerminalType"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#TerminalBlock -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#TerminalBlock">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/pvont#hasTerminal"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/pvont#Terminal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#TerminalTypes -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#TerminalTypes">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#ElectricalTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Transformer -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Transformer">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#UtilityInteractiveInverter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#UtilityInteractiveInverter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#Inverter"/>
+        <rdfs:comment>An inverter that can function only when tied to the utility grid, and uses the prevailing line-voltage frequency on the utility line as a control parameter to ensure that the photovoltaic system&apos;s output is fully synchronized with the utility power.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Varistor -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Varistor">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#PassiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#Voltmeter -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#Voltmeter">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#MeasurementDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/pvont#WindSpeedSensor -->
+
+    <owl:Class rdf:about="https://purl.org/pvont#WindSpeedSensor">
+        <rdfs:subClassOf rdf:resource="https://purl.org/pvont#MeasurementDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/pvont#activePower -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#activePower">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#aluminium -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#aluminium">
+        <rdf:type rdf:resource="https://purl.org/pvont#ConductorMaterialType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#ampere -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#ampere">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#ampere-hour -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#ampere-hour">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#anode -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#anode">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#battery -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#battery">
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#breaker -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#breaker">
+        <rdf:type rdf:resource="https://purl.org/pvont#FuseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#capacitive -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#capacitive">
+        <rdf:type rdf:resource="https://purl.org/pvont#LoadType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#cathode -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#cathode">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#charge -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#charge">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#charging -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#charging">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#communication -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#communication">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#controller -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#controller">
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#copper -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#copper">
+        <rdf:type rdf:resource="https://purl.org/pvont#ConductorMaterialType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#coulomb -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#coulomb">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#current -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#current">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#deepDischarge -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#deepDischarge">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#degree-celsius -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#degree-celsius">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#discharging -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#discharging">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#earth -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#earth"/>
+    
+
+
+    <!-- https://purl.org/pvont#earthing -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#earthing">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#equalization -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#equalization">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+        <rdfs:comment>The process of restoring all cells in a battery to an equal state-of-charge. Some battery types may require a complete discharge as a part of the equalization process.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#facade -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#facade">
+        <rdf:type rdf:resource="https://purl.org/pvont#PanelLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#fixedTiltArray -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#fixedTiltArray">
+        <rdf:type rdf:resource="https://purl.org/pvont#PVAttributes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#flatPlateArray -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#flatPlateArray">
+        <rdf:type rdf:resource="https://purl.org/pvont#PVAttributes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#floatService -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#floatService">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+        <rdfs:comment>A battery operation in which the battery is normally connected to an external current source; for instance, a battery charger which supplies the battery load&lt; under normal conditions, while also providing enough energy input to the battery to make up for its internal quiescent losses, thus keeping the battery always up to full power and ready for service.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#gridConnectedSystem -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#gridConnectedSystem">
+        <rdf:type rdf:resource="https://purl.org/pvont#PVAttributes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#ground -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#ground">
+        <rdf:type rdf:resource="https://purl.org/pvont#Polarity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#idle -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#idle">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#impedance -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#impedance">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#indoor -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#indoor">
+        <rdf:type rdf:resource="https://purl.org/pvont#PanelLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#inductive -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#inductive">
+        <rdf:type rdf:resource="https://purl.org/pvont#LoadType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#input -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#input">
+        <rdf:type rdf:resource="https://purl.org/pvont#CurrentDirection"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#irradiance -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#irradiance">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#irradiation -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#irradiation">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#live -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#live">
+        <rdf:type rdf:resource="https://purl.org/pvont#Polarity"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#load -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#load">
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#monocrystalline -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#monocrystalline">
+        <rdf:type rdf:resource="https://purl.org/pvont#PVAttributes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#negative -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#negative">
+        <rdf:type rdf:resource="https://purl.org/pvont#Polarity"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#neutral -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#neutral">
+        <rdf:type rdf:resource="https://purl.org/pvont#Polarity"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#ohms -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#ohms">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#onground -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#onground">
+        <rdf:type rdf:resource="https://purl.org/pvont#PanelLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#output -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#output">
+        <rdf:type rdf:resource="https://purl.org/pvont#CurrentDirection"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#overcharge -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#overcharge">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#parallel -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#parallel">
+        <rdf:type rdf:resource="https://purl.org/pvont#CircuitType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#polycrystalline -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#polycrystalline">
+        <rdf:type rdf:resource="https://purl.org/pvont#PVAttributes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#positive -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#positive">
+        <rdf:type rdf:resource="https://purl.org/pvont#Polarity"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#power -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#power">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#powerFactor -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#powerFactor">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#powerInput -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#powerInput">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#powerOutput -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#powerOutput">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#pvThermalSystem -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#pvThermalSystem">
+        <rdf:type rdf:resource="https://purl.org/pvont#PVAttributes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#pv_panel -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#pv_panel">
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#pvarray -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#pvarray">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#reactivePower -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#reactivePower">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#resistance -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#resistance">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#resistive -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#resistive">
+        <rdf:type rdf:resource="https://purl.org/pvont#LoadType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#roofslope -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#roofslope">
+        <rdf:type rdf:resource="https://purl.org/pvont#PanelLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#rooftop -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#rooftop">
+        <rdf:type rdf:resource="https://purl.org/pvont#PanelLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#series -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#series">
+        <rdf:type rdf:resource="https://purl.org/pvont#CircuitType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#seriesController -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#seriesController">
+        <rdf:type rdf:resource="https://purl.org/pvont#ChargeControlStrategy"/>
+        <rdfs:comment>A charge controller that interrupts the charging current by open-circuiting the photovoltaic (PV) array. The control element is in series with the PV array and battery.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#seriesRegulator -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#seriesRegulator">
+        <rdf:type rdf:resource="https://purl.org/pvont#ChargeControlStrategy"/>
+        <rdfs:comment>Type of battery charge regulator where the charging current is controlled by a switch connected in series with the photovoltaic module or array.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#shuntController -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#shuntController">
+        <rdf:type rdf:resource="https://purl.org/pvont#ChargeControlStrategy"/>
+        <rdfs:comment>A charge controller that redirects or shunts the charging current away from the battery. The controller requires a large heat sink to dissipate the current from the short-circuited photovoltaic array. Most shunt controllers are for smaller systems producing 30 amperes or less.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#shuntRegulator -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#shuntRegulator">
+        <rdf:type rdf:resource="https://purl.org/pvont#ChargeControlStrategy"/>
+        <rdfs:comment>Type of a battery charge regulator where the charging current is controlled by a switch connected in parallel with the photovoltaic (PV) generator. Shorting the PV generator prevents overcharging of the battery.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#signalInput -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#signalInput">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#signalOutput -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#signalOutput">
+        <rdf:type rdf:resource="https://purl.org/pvont#TerminalTypes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#singlePhase -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#singlePhase">
+        <rdf:type rdf:resource="https://purl.org/pvont#CircuitType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#singleStateController -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#singleStateController">
+        <rdf:type rdf:resource="https://purl.org/pvont#ChargeControlStrategy"/>
+        <rdfs:comment>A charge controller that redirects all charging current as the battery nears full state-of-charge.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#slowBlowFuse -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#slowBlowFuse">
+        <rdf:type rdf:resource="https://purl.org/pvont#FuseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#solid -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#solid">
+        <rdf:type rdf:resource="https://purl.org/pvont#ConductorMaterialType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#stranded -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#stranded">
+        <rdf:type rdf:resource="https://purl.org/pvont#ConductorMaterialType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#temperature -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#temperature">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#threePhase -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#threePhase">
+        <rdf:type rdf:resource="https://purl.org/pvont#CircuitType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#trickleCharge -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#trickleCharge">
+        <rdf:type rdf:resource="https://purl.org/pvont#BatteryOperationState"/>
+        <rdfs:comment>A charge at a low rate, balancing through self-discharge losses, to maintain a</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#voltage -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#voltage">
+        <rdf:type rdf:resource="https://purl.org/pvont#Measurement"/>
+        <rdf:type rdf:resource="https://purl.org/pvont#Tag"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#volts -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#volts">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#watt-hour -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#watt-hour">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/pvont#watts -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/pvont#watts">
+        <rdf:type rdf:resource="https://purl.org/pvont#MeasurementUnits"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/pvont#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pvont#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pvont#t2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pvont#m1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pvont#m2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pvont#t1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParallelPV</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasPolarity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#t2"/>
+                        <swrl:argument2 rdf:resource="https://purl.org/pvont#negative"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://purl.org/pvont#PVModule"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://purl.org/pvont#PVModule"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#connectedTo"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#t1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#t2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasTerminal"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#t1"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasTerminal"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#t2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasPolarity"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#t1"/>
+                                                                        <swrl:argument2 rdf:resource="https://purl.org/pvont#positive"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#inParallelTo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#m2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SeriesPV</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasPolarity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#t2"/>
+                        <swrl:argument2 rdf:resource="https://purl.org/pvont#negative"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://purl.org/pvont#PVModule"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://purl.org/pvont#PVModule"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#connectedTo"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#t1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#t2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasTerminal"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#t1"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasTerminal"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#t2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#hasPolarity"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#t1"/>
+                                                                        <swrl:argument2 rdf:resource="https://purl.org/pvont#positive"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#inSeriesWith"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#m1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#m2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TotalVoltage</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://purl.org/pvont#nominalVoltage"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#b"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pvont#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://purl.org/pvont#Battery"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pvont#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#sum"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/pvont#v"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

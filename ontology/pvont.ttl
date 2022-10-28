@@ -5,9 +5,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pvont: <http://www.semanticweb.org/ramanatg/ontologies/2022/7/untitled-ontology-215#> .
-@base <http://www.semanticweb.org/pvont> .
+@base <https://purl.org/pvont> .
 
-<http://www.semanticweb.org/pvont> rdf:type owl:Ontology .
+<https://purl.org/pvont> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -17,11 +17,11 @@
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasMeasurement
+###  https://purl.org/pvont#hasMeasurement
 :hasMeasurement rdf:type owl:AnnotationProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasMeasurementUnits
+###  https://purl.org/pvont#hasMeasurementUnits
 :hasMeasurementUnits rdf:type owl:AnnotationProperty .
 
 
@@ -29,7 +29,7 @@
 #    Datatypes
 #################################################################
 
-###  http://www.semanticweb.org/pvont#pvAvailability
+###  https://purl.org/pvont#pvAvailability
 :pvAvailability rdf:type rdfs:Datatype ;
                 owl:equivalentClass xsd:float .
 
@@ -38,95 +38,95 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/pvont#connectedTo
+###  https://purl.org/pvont#connectedTo
 :connectedTo rdf:type owl:ObjectProperty ,
                       owl:SymmetricProperty ,
                       owl:TransitiveProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasComponent
+###  https://purl.org/pvont#hasComponent
 :hasComponent rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasConductorMaterial
+###  https://purl.org/pvont#hasConductorMaterial
 :hasConductorMaterial rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasModule
+###  https://purl.org/pvont#hasModule
 :hasModule rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasPart .
 
 
-###  http://www.semanticweb.org/pvont#hasPVCrystalType
+###  https://purl.org/pvont#hasPVCrystalType
 :hasPVCrystalType rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasPart
+###  https://purl.org/pvont#hasPart
 :hasPart rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasPolarity
+###  https://purl.org/pvont#hasPolarity
 :hasPolarity rdf:type owl:ObjectProperty ;
              rdfs:domain :Terminal ;
              rdfs:range :Polarity .
 
 
-###  http://www.semanticweb.org/pvont#hasProductSpecification
+###  https://purl.org/pvont#hasProductSpecification
 :hasProductSpecification rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasTag
+###  https://purl.org/pvont#hasTag
 :hasTag rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasTerminal
+###  https://purl.org/pvont#hasTerminal
 :hasTerminal rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasPart .
 
 
-###  http://www.semanticweb.org/pvont#hasTerminalBlock
+###  https://purl.org/pvont#hasTerminalBlock
 :hasTerminalBlock rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasPart .
 
 
-###  http://www.semanticweb.org/pvont#hasTerminalType
+###  https://purl.org/pvont#hasTerminalType
 :hasTerminalType rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#inParallelTo
+###  https://purl.org/pvont#inParallelTo
 :inParallelTo rdf:type owl:ObjectProperty ,
                        owl:SymmetricProperty .
 
 
-###  http://www.semanticweb.org/pvont#inSeriesWith
+###  https://purl.org/pvont#inSeriesWith
 :inSeriesWith rdf:type owl:ObjectProperty ,
                        owl:SymmetricProperty .
 
 
-###  http://www.semanticweb.org/pvont#isPartOf
+###  https://purl.org/pvont#isPartOf
 :isPartOf rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#locatedIn
+###  https://purl.org/pvont#locatedIn
 :locatedIn rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#representedBy
+###  https://purl.org/pvont#representedBy
 :representedBy rdf:type owl:ObjectProperty ;
                owl:inverseOf :represents ;
                rdfs:range :DataPoint .
 
 
-###  http://www.semanticweb.org/pvont#represents
+###  https://purl.org/pvont#represents
 :represents rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#usesFunction
+###  https://purl.org/pvont#usesFunction
 :usesFunction rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/pvont#usingWire
+###  https://purl.org/pvont#usingWire
 :usingWire rdf:type owl:ObjectProperty ;
            rdfs:range :ElectricalWire .
 
@@ -135,510 +135,540 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/pvont#azimuth
+###  https://purl.org/pvont#azimuth
 :azimuth rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf :geometrySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryAvailableCapacity
+###  https://purl.org/pvont#batteryAvailableCapacity
 :batteryAvailableCapacity rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryCapacity
+###  https://purl.org/pvont#batteryCapacity
 :batteryCapacity rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :batterySpecification ;
                  :hasMeasurement :charge ;
                  :hasMeasurementUnits :ampere-hour .
 
 
-###  http://www.semanticweb.org/pvont#batteryChargeFactor
+###  https://purl.org/pvont#batteryChargeFactor
 :batteryChargeFactor rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :batterySpecification ;
                      rdfs:comment "A number representing the time in hours during which a battery can be charged at a constant current without damage to the battery. Usually expressed in relation to the total battery capacity, i.e., C/5 indicates a charge factor of 5 hours. Related to charge rate." .
 
 
-###  http://www.semanticweb.org/pvont#batteryChargeRate
+###  https://purl.org/pvont#batteryChargeRate
 :batteryChargeRate rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :batterySpecification ;
                    rdfs:comment "The current applied to a cell or battery to restore its available capacity. This rate is commonly normalized by a charge control device with respect to the rated capacity of the cell or battery." .
 
 
-###  http://www.semanticweb.org/pvont#batteryCurrentCharging
+###  https://purl.org/pvont#batteryCurrentCharging
 :batteryCurrentCharging rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryCurrentMaximum
+###  https://purl.org/pvont#batteryCurrentMaximum
 :batteryCurrentMaximum rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryCycleLife
+###  https://purl.org/pvont#batteryCycleLife
 :batteryCycleLife rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryDepthOfDischarge
+###  https://purl.org/pvont#batteryDepthOfDischarge
 :batteryDepthOfDischarge rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :batterySpecification ;
                          rdfs:comment "The ampere-hours removed from a fully charged cell or battery, expressed as a percentage of rated capacity. For example, the removal of 25 ampere-hours from a fully charged 100 ampere-hours rated cell results in a 25% depth of discharge. Under certain conditions, such as discharge rates lower than that used to rate the cell, depth of discharge can exceed 100%." .
 
 
-###  http://www.semanticweb.org/pvont#batteryDischargeFactor
+###  https://purl.org/pvont#batteryDischargeFactor
 :batteryDischargeFactor rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :batterySpecification ;
                         rdfs:comment "A number equivalent to the time in hours during which a battery is discharged at constant current usually expressed as a percentage of the total battery capacity, i.e., C/5 indicates a discharge factor of 5 hours. Related to discharge rate." .
 
 
-###  http://www.semanticweb.org/pvont#batteryDischargeRate
+###  https://purl.org/pvont#batteryDischargeRate
 :batteryDischargeRate rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :batterySpecification ;
                       rdfs:comment "The rate, usually expressed in amperes or time, at which electrical current is taken from the battery." .
 
 
-###  http://www.semanticweb.org/pvont#batteryEnergyCapacity
+###  https://purl.org/pvont#batteryEnergyCapacity
 :batteryEnergyCapacity rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :batterySpecification ;
                        rdfs:comment "The total energy available, expressed in watt-hours (kilowatt-hours), which can be withdrawn from a fully charged cell or battery. The energy capacity of a given cell varies with temperature, rate, age, and cut-off voltage. This term is more common to system designers than it is to the battery industry where capacity usually refers to ampere-hours." .
 
 
-###  http://www.semanticweb.org/pvont#batteryEnergyDensity
+###  https://purl.org/pvont#batteryEnergyDensity
 :batteryEnergyDensity rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryFloatCharge
+###  https://purl.org/pvont#batteryFloatCharge
 :batteryFloatCharge rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :batterySpecification ;
                     rdfs:comment "The voltage required to counteract the self-discharge of the battery at a certain temperature." ;
                     rdfs:label "Float charge" .
 
 
-###  http://www.semanticweb.org/pvont#batteryFloatLife
+###  https://purl.org/pvont#batteryFloatLife
 :batteryFloatLife rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :batterySpecification ;
                   rdfs:comment "The number of years that a battery can keep its stated capacity when it is kept at float charge." ;
                   rdfs:label "Float life" .
 
 
-###  http://www.semanticweb.org/pvont#batteryLife
+###  https://purl.org/pvont#batteryLife
 :batteryLife rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :batterySpecification ;
              rdfs:comment "The period during which a cell or battery is capable of operating above a specified capacity or efficiency performance level. Life may be measured in cycles and/or years, depending on the type of service for which the cell or battery is intended." .
 
 
-###  http://www.semanticweb.org/pvont#batteryPowerDensity
+###  https://purl.org/pvont#batteryPowerDensity
 :batteryPowerDensity rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batterySpecification
+###  https://purl.org/pvont#batterySpecification
 :batterySpecification rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/pvont#batteryStateOfCharge
+###  https://purl.org/pvont#batteryStateOfCharge
 :batteryStateOfCharge rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :batterySpecification ;
                       rdfs:comment "The available capacity remaining in the battery, expressed as a percentage of the rated capacity" .
 
 
-###  http://www.semanticweb.org/pvont#batteryTemperatureMaximum
+###  https://purl.org/pvont#batteryTemperatureMaximum
 :batteryTemperatureMaximum rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryTemperatureMinimum
+###  https://purl.org/pvont#batteryTemperatureMinimum
 :batteryTemperatureMinimum rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryVoltageCharging
+###  https://purl.org/pvont#batteryVoltageCharging
 :batteryVoltageCharging rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryVoltageMaximum
+###  https://purl.org/pvont#batteryVoltageMaximum
 :batteryVoltageMaximum rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryVoltageMinimum
+###  https://purl.org/pvont#batteryVoltageMinimum
 :batteryVoltageMinimum rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryVoltageNominal
+###  https://purl.org/pvont#batteryVoltageNominal
 :batteryVoltageNominal rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :batterySpecification .
 
 
-###  http://www.semanticweb.org/pvont#batteryWetShelfLife
+###  https://purl.org/pvont#batteryWetShelfLife
 :batteryWetShelfLife rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :batterySpecification ;
                      rdfs:comment "The period of time that a charged battery, when filled with electrolyte, can remain unused before dropping below a specified level of performance." .
 
 
-###  http://www.semanticweb.org/pvont#controllerSpecification
+###  https://purl.org/pvont#controllerSpecification
 :controllerSpecification rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/pvont#cuttoffVoltage
+###  https://purl.org/pvont#cuttoffVoltage
 :cuttoffVoltage rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#depth
+###  https://purl.org/pvont#depth
 :depth rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :geometrySpecification .
 
 
-###  http://www.semanticweb.org/pvont#designMonth
+###  https://purl.org/pvont#designMonth
 :designMonth rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :designSpecification ;
              rdfs:comment "The month having the combination of insolation and load that requires the maximum energy from the photovoltaic array." .
 
 
-###  http://www.semanticweb.org/pvont#designSpecification
+###  https://purl.org/pvont#designSpecification
 :designSpecification rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/pvont#dutyCycle
+###  https://purl.org/pvont#dutyCycle
 :dutyCycle rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :designSpecification ;
            rdfs:comment "The ratio of active time to total time. Used to describe the operating regime of appliances or loads in photovoltaic systems." .
 
 
-###  http://www.semanticweb.org/pvont#dutyRating
+###  https://purl.org/pvont#dutyRating
 :dutyRating rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :controllerSpecification ;
             rdfs:comment "The amount of time an inverter (power conditioning unit) can produce at full rated power." .
 
 
-###  http://www.semanticweb.org/pvont#elevation
+###  https://purl.org/pvont#elevation
 :elevation rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :geometrySpecification .
 
 
-###  http://www.semanticweb.org/pvont#frequencyVariation
+###  https://purl.org/pvont#frequencyVariation
 :frequencyVariation rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#geometrySpecification
+###  https://purl.org/pvont#geometrySpecification
 :geometrySpecification rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/pvont#hasActivePower
+###  https://purl.org/pvont#hasActivePower
 :hasActivePower rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasBaseLoad
+###  https://purl.org/pvont#hasBaseLoad
 :hasBaseLoad rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasCapacityFactort
+###  https://purl.org/pvont#hasCapacityFactort
 :hasCapacityFactort rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :designSpecification ;
                     rdfs:comment "The ratio of the average load on (or power output of) an electricity generating unit or system to the capacity rating of the unit or system over a specified period of time." .
 
 
-###  http://www.semanticweb.org/pvont#hasConductorType
+###  https://purl.org/pvont#hasConductorType
 :hasConductorType rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :wiringSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasContactResistance
+###  https://purl.org/pvont#hasContactResistance
 :hasContactResistance rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :wiringSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasCores
+###  https://purl.org/pvont#hasCores
 :hasCores rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :wiringSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasCurrent
+###  https://purl.org/pvont#hasCurrent
 :hasCurrent rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasInsulationType
+###  https://purl.org/pvont#hasInsulationType
 :hasInsulationType rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :wiringSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasPhaseAngle
+###  https://purl.org/pvont#hasLocationAltitude
+:hasLocationAltitude rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :locationSpecification .
+
+
+###  https://purl.org/pvont#hasLocationLatitude
+:hasLocationLatitude rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :locationSpecification .
+
+
+###  https://purl.org/pvont#hasLocationLongitude
+:hasLocationLongitude rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :locationSpecification .
+
+
+###  https://purl.org/pvont#hasPhaseAngle
 :hasPhaseAngle rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasPhaseIdentifier
+###  https://purl.org/pvont#hasPhaseIdentifier
 :hasPhaseIdentifier rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasReactivePower
+###  https://purl.org/pvont#hasReactivePower
 :hasReactivePower rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasTotalPower
+###  https://purl.org/pvont#hasTotalPower
 :hasTotalPower rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasVoltage
+###  https://purl.org/pvont#hasVoltage
 :hasVoltage rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#hasWireGuage
+###  https://purl.org/pvont#hasWireGuage
 :hasWireGuage rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :wiringSpecification .
 
 
-###  http://www.semanticweb.org/pvont#height
+###  https://purl.org/pvont#height
 :height rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf :geometrySpecification .
 
 
-###  http://www.semanticweb.org/pvont#loadCurrent
+###  https://purl.org/pvont#loadCurrent
 :loadCurrent rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#loadResistance
+###  https://purl.org/pvont#loadResistance
 :loadResistance rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#lowVoltageDisconnect
+###  https://purl.org/pvont#locationSpecification
+:locationSpecification rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :geometrySpecification .
+
+
+###  https://purl.org/pvont#lowVoltageDisconnect
 :lowVoltageDisconnect rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :controllerSpecification ;
                       rdfs:comment "The voltage at which a charge controller will disconnect the load from the batteries to prevent over-discharging." .
 
 
-###  http://www.semanticweb.org/pvont#lowVoltageDisconnectHysteresis
+###  https://purl.org/pvont#lowVoltageDisconnectHysteresis
 :lowVoltageDisconnectHysteresis rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf :controllerSpecification ;
                                 rdfs:comment "The voltage difference between the low voltage disconnect set point and the voltage at which the load will be reconnected." .
 
 
-###  http://www.semanticweb.org/pvont#lowVoltageWarningLevel
+###  https://purl.org/pvont#lowVoltageWarningLevel
 :lowVoltageWarningLevel rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :controllerSpecification .
 
 
-###  http://www.semanticweb.org/pvont#lowVotageCuttoff
+###  https://purl.org/pvont#lowVotageCuttoff
 :lowVotageCuttoff rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :controllerSpecification ;
                   rdfs:comment "The voltage level at which a charge controller will disconnect the load from the battery." .
 
 
-###  http://www.semanticweb.org/pvont#manufacturerModelName
+###  https://purl.org/pvont#manufacturerModelName
 :manufacturerModelName rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :productSpecification .
 
 
-###  http://www.semanticweb.org/pvont#manufacturerName
+###  https://purl.org/pvont#manufacturerName
 :manufacturerName rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :productSpecification .
 
 
-###  http://www.semanticweb.org/pvont#nominalVoltage
+###  https://purl.org/pvont#nominalVoltage
 :nominalVoltage rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :designSpecification .
 
 
-###  http://www.semanticweb.org/pvont#productSpecification
+###  https://purl.org/pvont#productSpecification
 :productSpecification rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/pvont#projectedArea
+###  https://purl.org/pvont#projectedArea
 :projectedArea rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :designSpecification ;
                rdfs:comment "The net south-facing glazing area projected on a vertical plane." .
 
 
-###  http://www.semanticweb.org/pvont#pvAvailability
+###  https://purl.org/pvont#pvAvailability
 :pvAvailability rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvConversionEfficiency
+###  https://purl.org/pvont#pvConversionEfficiency
 :pvConversionEfficiency rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvFillFactor
+###  https://purl.org/pvont#pvFillFactor
 :pvFillFactor rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :pvSpecification ;
               rdfs:comment "The ratio of a photovoltaic cell's actual power to its power if both current and voltage were at their maxima. A key characteristic in evaluating cell performance." ;
               rdfs:label "Fill factor" .
 
 
-###  http://www.semanticweb.org/pvont#pvMaxSurfaceLoading
+###  https://purl.org/pvont#pvMaxSurfaceLoading
 :pvMaxSurfaceLoading rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvModuleLife80percent
+###  https://purl.org/pvont#pvModuleLife80percent
 :pvModuleLife80percent rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvModuleLife90percent
+###  https://purl.org/pvont#pvModuleLife90percent
 :pvModuleLife90percent rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvMppCurrent
+###  https://purl.org/pvont#pvMppCurrent
 :pvMppCurrent rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvMppVoltage
+###  https://purl.org/pvont#pvMppVoltage
 :pvMppVoltage rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvNormalOperatingCellTemperature
+###  https://purl.org/pvont#pvNormalOperatingCellTemperature
 :pvNormalOperatingCellTemperature rdf:type owl:DatatypeProperty ;
                                   rdfs:subPropertyOf :pvSpecification ;
                                   rdfs:comment "(NOCT) — The estimated temperature of a photovoltaic module when operating under 800 w/m2 irradiance, 20°C ambient temperature and wind speed of 1 meter per second. NOCT is used to estimate the nominal operating temperature of a module in its working environment." ;
                                   rdfs:label "NOCT" .
 
 
-###  http://www.semanticweb.org/pvont#pvNumberOfCells
+###  https://purl.org/pvont#pvNumberOfCells
 :pvNumberOfCells rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvOpenCircuitVoltage
+###  https://purl.org/pvont#pvOpenCircuitVoltage
 :pvOpenCircuitVoltage rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvOutputTolerance
+###  https://purl.org/pvont#pvOutputTolerance
 :pvOutputTolerance rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvQuantumEfficiency
+###  https://purl.org/pvont#pvQuantumEfficiency
 :pvQuantumEfficiency rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :pvSpecification ;
                      rdfs:comment "The ratio of the number of charge carriers collected by a photovoltaic cell to the number of photons of a given energy shining on the cell. Quantum efficiency relates to the response of a solar cell to the different wavelengths in the spectrum of light shining on the cell. QE is given as a function of either wavelength or energy. Optimally, a solar cell should generate considerable electrical current for wavelengths that are most abundant in sunlight." .
 
 
-###  http://www.semanticweb.org/pvont#pvRatedModuleCurrent
+###  https://purl.org/pvont#pvRatedModuleCurrent
 :pvRatedModuleCurrent rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :pvSpecification ;
                       rdfs:comment "The current output of a photovoltaic module measured at standard test conditions of 1,000 w/m2 and 25°C cell temperature." .
 
 
-###  http://www.semanticweb.org/pvont#pvRatedPower
+###  https://purl.org/pvont#pvRatedPower
 :pvRatedPower rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvShortCircuitCurrent
+###  https://purl.org/pvont#pvShortCircuitCurrent
 :pvShortCircuitCurrent rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvSpecification
+###  https://purl.org/pvont#pvSpecification
 :pvSpecification rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/pvont#pvTemperatureCoefficientIsc
+###  https://purl.org/pvont#pvTemperatureCoefficientIsc
 :pvTemperatureCoefficientIsc rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvTemperatureCoefficientMPP
+###  https://purl.org/pvont#pvTemperatureCoefficientMPP
 :pvTemperatureCoefficientMPP rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvTemperatureCoefficientVoc
+###  https://purl.org/pvont#pvTemperatureCoefficientVoc
 :pvTemperatureCoefficientVoc rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvTemperatureRangeMax
+###  https://purl.org/pvont#pvTemperatureRangeMax
 :pvTemperatureRangeMax rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#pvTemperatureRangeMin
+###  https://purl.org/pvont#pvTemperatureRangeMin
 :pvTemperatureRangeMin rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :pvSpecification .
 
 
-###  http://www.semanticweb.org/pvont#rampRate
+###  https://purl.org/pvont#rampRate
 :rampRate rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :designSpecification ;
           rdfs:comment "The ability of a generating unit to change its output over some unit of time, often measured in MW/min." .
 
 
-###  http://www.semanticweb.org/pvont#ratedPower
+###  https://purl.org/pvont#ratedCurrent
+:ratedCurrent rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :designSpecification .
+
+
+###  https://purl.org/pvont#ratedPower
 :ratedPower rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :controllerSpecification .
 
 
-###  http://www.semanticweb.org/pvont#standbyCurrent
+###  https://purl.org/pvont#ratedVoltage
+:ratedVoltage rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :designSpecification .
+
+
+###  https://purl.org/pvont#standbyCurrent
 :standbyCurrent rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :controllerSpecification .
 
 
-###  http://www.semanticweb.org/pvont#surgeCapacity
+###  https://purl.org/pvont#surgeCapacity
 :surgeCapacity rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :designSpecification ;
                rdfs:comment "The maximum power, usually 3-5 times the rated power, that can be provided over a short time." .
 
 
-###  http://www.semanticweb.org/pvont#systemAvailability
+###  https://purl.org/pvont#systemAvailability
 :systemAvailability rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :designSpecification ;
                     rdfs:comment "The percentage of time (usually expressed in hours per year) when a photovoltaic system will be able to fully meet the load demand." .
 
 
-###  http://www.semanticweb.org/pvont#systemOperatingVoltage
+###  https://purl.org/pvont#systemOperatingVoltage
 :systemOperatingVoltage rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :designSpecification ;
                         rdfs:comment "The photovoltaic array output voltage under load. The system operating voltage is dependent on the load or batteries connected to the output terminals." .
 
 
-###  http://www.semanticweb.org/pvont#temperatureCompensation
+###  https://purl.org/pvont#temperatureCompensation
 :temperatureCompensation rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :controllerSpecification .
 
 
-###  http://www.semanticweb.org/pvont#tiltAngle
+###  https://purl.org/pvont#tiltAngle
 :tiltAngle rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :geometrySpecification ;
            rdfs:comment "The angle at which a photovoltaic array is set to face the sun relative to a horizontal position. The tilt angle can be set or adjusted to maximize seasonal or annual energy collection." .
 
 
-###  http://www.semanticweb.org/pvont#totalACLoadDemand
+###  https://purl.org/pvont#totalACLoadDemand
 :totalACLoadDemand rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :designSpecification ;
                    rdfs:comment "The sum of the alternating current loads. This value is important when selecting an inverter." .
 
 
-###  http://www.semanticweb.org/pvont#width
+###  https://purl.org/pvont#width
 :width rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :geometrySpecification .
 
 
-###  http://www.semanticweb.org/pvont#wiringSpecification
+###  https://purl.org/pvont#wiringSpecification
 :wiringSpecification rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/pvont#zenithAngle
+###  https://purl.org/pvont#zenithAngle
 :zenithAngle rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :geometrySpecification ;
              rdfs:comment "the angle between the direction of interest (of the sun, for example) and the zenith (directly overhead)." .
@@ -648,78 +678,78 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/pvont#ActiveComponent
+###  https://purl.org/pvont#ActiveComponent
 :ActiveComponent rdf:type owl:Class ;
                  rdfs:subClassOf :Component .
 
 
-###  http://www.semanticweb.org/pvont#Actuator
+###  https://purl.org/pvont#Actuator
 :Actuator rdf:type owl:Class ;
           rdfs:subClassOf :CPSDevice .
 
 
-###  http://www.semanticweb.org/pvont#Ammeter
+###  https://purl.org/pvont#Ammeter
 :Ammeter rdf:type owl:Class ;
          rdfs:subClassOf :MeasurementDevice .
 
 
-###  http://www.semanticweb.org/pvont#Battery
+###  https://purl.org/pvont#Battery
 :Battery rdf:type owl:Class ;
          rdfs:subClassOf :ActiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#BatteryOperationState
+###  https://purl.org/pvont#BatteryOperationState
 :BatteryOperationState rdf:type owl:Class ;
                        rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#BlockingDiode
+###  https://purl.org/pvont#BlockingDiode
 :BlockingDiode rdf:type owl:Class ;
                rdfs:subClassOf :Diode .
 
 
-###  http://www.semanticweb.org/pvont#BypassDiode
+###  https://purl.org/pvont#BypassDiode
 :BypassDiode rdf:type owl:Class ;
              rdfs:subClassOf :Diode .
 
 
-###  http://www.semanticweb.org/pvont#CPSDevice
+###  https://purl.org/pvont#CPSDevice
 :CPSDevice rdf:type owl:Class ;
            rdfs:subClassOf :Component .
 
 
-###  http://www.semanticweb.org/pvont#Capacitor
+###  https://purl.org/pvont#Capacitor
 :Capacitor rdf:type owl:Class ;
            rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#CaptiveElectrolyteBattery
+###  https://purl.org/pvont#CaptiveElectrolyteBattery
 :CaptiveElectrolyteBattery rdf:type owl:Class ;
                            rdfs:subClassOf :Battery ;
                            rdfs:comment "A battery having an immobilized electrolyte (gelled or absorbed in a material)." .
 
 
-###  http://www.semanticweb.org/pvont#CharactersticCurve
+###  https://purl.org/pvont#CharactersticCurve
 :CharactersticCurve rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#ChargeControlStrategy
+###  https://purl.org/pvont#ChargeControlStrategy
 :ChargeControlStrategy rdf:type owl:Class ;
                        rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#ChargeController
+###  https://purl.org/pvont#ChargeController
 :ChargeController rdf:type owl:Class ;
                   rdfs:subClassOf :ActiveComponent ;
                   rdfs:comment "A component of a photovoltaic system that controls the flow of current to and from the battery to protect it from over-charge and over-discharge. The charge controller may also indicate the system operational status." .
 
 
-###  http://www.semanticweb.org/pvont#CircuitType
+###  https://purl.org/pvont#CircuitType
 :CircuitType rdf:type owl:Class ;
              rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#Component
+###  https://purl.org/pvont#Component
 :Component rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasTerminal ;
@@ -727,309 +757,323 @@
                            ] .
 
 
-###  http://www.semanticweb.org/pvont#Concentrator
+###  https://purl.org/pvont#Concentrator
 :Concentrator rdf:type owl:Class ;
               rdfs:subClassOf :PassiveComponent ;
               rdfs:comment "A photovoltaic module, which includes optical components such as lenses (Fresnel lens) to direct and concentrate sunlight onto a solar cell of smaller area. Most concentrator arrays must directly face or track the sun. They can increase the power flux of sunlight hundreds of times." .
 
 
-###  http://www.semanticweb.org/pvont#ConductorMaterialType
+###  https://purl.org/pvont#ConductorMaterialType
 :ConductorMaterialType rdf:type owl:Class ;
                        rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#Converter
+###  https://purl.org/pvont#Converter
 :Converter rdf:type owl:Class ;
            rdfs:subClassOf :ActiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#CurrentDirection
+###  https://purl.org/pvont#CurrentDirection
 :CurrentDirection rdf:type owl:Class ;
                   rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#CurvePoint
+###  https://purl.org/pvont#CurvePoint
 :CurvePoint rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#DataPoint
+###  https://purl.org/pvont#DataPoint
 :DataPoint rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#Diode
+###  https://purl.org/pvont#Diode
 :Diode rdf:type owl:Class ;
        rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#DoubleAxisTracker
+###  https://purl.org/pvont#DoubleAxisTracker
 :DoubleAxisTracker rdf:type owl:Class ;
                    rdfs:subClassOf :SunTracker .
 
 
-###  http://www.semanticweb.org/pvont#EdgeDevice
+###  https://purl.org/pvont#EdgeDevice
 :EdgeDevice rdf:type owl:Class ;
             rdfs:subClassOf :CPSDevice .
 
 
-###  http://www.semanticweb.org/pvont#ElectricalCircuit
+###  https://purl.org/pvont#ElectricalCircuit
 :ElectricalCircuit rdf:type owl:Class ;
                    rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#ElectricalTerm
+###  https://purl.org/pvont#ElectricalTerm
 :ElectricalTerm rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#ElectricalWire
+###  https://purl.org/pvont#ElectricalWire
 :ElectricalWire rdf:type owl:Class ;
                 rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#Filter
+###  https://purl.org/pvont#Filter
 :Filter rdf:type owl:Class ;
         rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#Function
+###  https://purl.org/pvont#Function
 :Function rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#Fuse
+###  https://purl.org/pvont#Fuse
 :Fuse rdf:type owl:Class ;
       rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#IOModule
+###  https://purl.org/pvont#FuseType
+:FuseType rdf:type owl:Class ;
+          rdfs:subClassOf :ElectricalTerm .
+
+
+###  https://purl.org/pvont#IOModule
 :IOModule rdf:type owl:Class ;
           rdfs:subClassOf :CPSDevice .
 
 
-###  http://www.semanticweb.org/pvont#IVCurve
+###  https://purl.org/pvont#IVCurve
 :IVCurve rdf:type owl:Class ;
          rdfs:subClassOf :CharactersticCurve .
 
 
-###  http://www.semanticweb.org/pvont#Inductor
+###  https://purl.org/pvont#Inductor
 :Inductor rdf:type owl:Class ;
           rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#Inverter
+###  https://purl.org/pvont#Inverter
 :Inverter rdf:type owl:Class ;
           rdfs:subClassOf :ActiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#LeadAcidBattery
+###  https://purl.org/pvont#LeadAcidBattery
 :LeadAcidBattery rdf:type owl:Class ;
                  rdfs:subClassOf :LiquidElectrolyteBattery .
 
 
-###  http://www.semanticweb.org/pvont#LineCommutatedInverter
+###  https://purl.org/pvont#LineCommutatedInverter
 :LineCommutatedInverter rdf:type owl:Class ;
                         rdfs:subClassOf :Inverter .
 
 
-###  http://www.semanticweb.org/pvont#LiquidElectrolyteBattery
+###  https://purl.org/pvont#LiquidElectrolyteBattery
 :LiquidElectrolyteBattery rdf:type owl:Class ;
                           rdfs:subClassOf :Battery .
 
 
-###  http://www.semanticweb.org/pvont#LithiumIonBattery
+###  https://purl.org/pvont#LithiumIonBattery
 :LithiumIonBattery rdf:type owl:Class ;
                    rdfs:subClassOf :Battery .
 
 
-###  http://www.semanticweb.org/pvont#LithiumPolymerBattery
+###  https://purl.org/pvont#LithiumPolymerBattery
 :LithiumPolymerBattery rdf:type owl:Class ;
                        rdfs:subClassOf :Battery .
 
 
-###  http://www.semanticweb.org/pvont#Load
+###  https://purl.org/pvont#Load
 :Load rdf:type owl:Class ;
       rdfs:subClassOf :Component .
 
 
-###  http://www.semanticweb.org/pvont#LoadForecast
+###  https://purl.org/pvont#LoadForecast
 :LoadForecast rdf:type owl:Class ;
               rdfs:subClassOf :CharactersticCurve .
 
 
-###  http://www.semanticweb.org/pvont#LoadType
+###  https://purl.org/pvont#LoadType
 :LoadType rdf:type owl:Class ;
           rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#MPPTController
+###  https://purl.org/pvont#Location
+:Location rdf:type owl:Class .
+
+
+###  https://purl.org/pvont#MPPTController
 :MPPTController rdf:type owl:Class ;
                 rdfs:subClassOf :ChargeController .
 
 
-###  http://www.semanticweb.org/pvont#MaintenanceFreeBattery
+###  https://purl.org/pvont#MaintenanceFreeBattery
 :MaintenanceFreeBattery rdf:type owl:Class ;
                         rdfs:subClassOf :Battery .
 
 
-###  http://www.semanticweb.org/pvont#MaximumPowerPoint
+###  https://purl.org/pvont#MaximumPowerPoint
 :MaximumPowerPoint rdf:type owl:Class ;
                    rdfs:subClassOf :CurvePoint .
 
 
-###  http://www.semanticweb.org/pvont#MaximumPowerTracking
+###  https://purl.org/pvont#MaximumPowerTracking
 :MaximumPowerTracking rdf:type owl:Class ;
                       rdfs:subClassOf :Function .
 
 
-###  http://www.semanticweb.org/pvont#Measurement
+###  https://purl.org/pvont#Measurement
 :Measurement rdf:type owl:Class ;
              rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#MeasurementDevice
+###  https://purl.org/pvont#MeasurementDevice
 :MeasurementDevice rdf:type owl:Class ;
                    rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#MeasurementUnits
+###  https://purl.org/pvont#MeasurementUnits
 :MeasurementUnits rdf:type owl:Class ;
                   rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#MultiCoreElectricalWire
+###  https://purl.org/pvont#MultiCoreElectricalWire
 :MultiCoreElectricalWire rdf:type owl:Class ;
-                         rdfs:subClassOf :ElectricalTerm .
+                         rdfs:subClassOf :ElectricalWire .
 
 
-###  http://www.semanticweb.org/pvont#MultiStageController
+###  https://purl.org/pvont#MultiStageController
 :MultiStageController rdf:type owl:Class ;
                       rdfs:subClassOf :ChargeController ;
                       rdfs:comment "A charging controller unit that allows different charging currents as the battery nears full state_of_charge." .
 
 
-###  http://www.semanticweb.org/pvont#NickelCadmiumBattery
+###  https://purl.org/pvont#NickelCadmiumBattery
 :NickelCadmiumBattery rdf:type owl:Class ;
                       rdfs:subClassOf :Battery .
 
 
-###  http://www.semanticweb.org/pvont#PVArray
+###  https://purl.org/pvont#PVArray
 :PVArray rdf:type owl:Class ;
          rdfs:subClassOf :ActiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#PVAttributes
+###  https://purl.org/pvont#PVAttributes
 :PVAttributes rdf:type owl:Class ;
               rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#PVCell
+###  https://purl.org/pvont#PVCell
 :PVCell rdf:type owl:Class ;
         rdfs:subClassOf :ActiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#PVCurve
+###  https://purl.org/pvont#PVCurve
 :PVCurve rdf:type owl:Class ;
          rdfs:subClassOf :CharactersticCurve .
 
 
-###  http://www.semanticweb.org/pvont#PVModule
+###  https://purl.org/pvont#PVModule
 :PVModule rdf:type owl:Class ;
           rdfs:subClassOf :ActiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#PWMController
+###  https://purl.org/pvont#PWMController
 :PWMController rdf:type owl:Class ;
                rdfs:subClassOf :ChargeController .
 
 
-###  http://www.semanticweb.org/pvont#PassiveComponent
+###  https://purl.org/pvont#PanelLocation
+:PanelLocation rdf:type owl:Class ;
+               rdfs:subClassOf :Location .
+
+
+###  https://purl.org/pvont#PassiveComponent
 :PassiveComponent rdf:type owl:Class ;
                   rdfs:subClassOf :Component .
 
 
-###  http://www.semanticweb.org/pvont#PeakDemandLimiting
+###  https://purl.org/pvont#PeakDemandLimiting
 :PeakDemandLimiting rdf:type owl:Class ;
                     rdfs:subClassOf :Function .
 
 
-###  http://www.semanticweb.org/pvont#Polarity
+###  https://purl.org/pvont#Polarity
 :Polarity rdf:type owl:Class ;
           rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#Powermeter
+###  https://purl.org/pvont#Powermeter
 :Powermeter rdf:type owl:Class ;
             rdfs:subClassOf :MeasurementDevice .
 
 
-###  http://www.semanticweb.org/pvont#ProductSpecification
+###  https://purl.org/pvont#ProductSpecification
 :ProductSpecification rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#Pyranometer
+###  https://purl.org/pvont#Pyranometer
 :Pyranometer rdf:type owl:Class ;
              rdfs:subClassOf :MeasurementDevice ;
              rdfs:comment "An instrument used for measuring global solar irradiance." .
 
 
-###  http://www.semanticweb.org/pvont#Pyrheliometer
+###  https://purl.org/pvont#Pyrheliometer
 :Pyrheliometer rdf:type owl:Class ;
                rdfs:subClassOf :MeasurementDevice ;
                rdfs:comment "An instrument used for measuring direct beam solar irradiance. Uses an aperture of 5.7° to transcribe the solar disc." .
 
 
-###  http://www.semanticweb.org/pvont#Relay
+###  https://purl.org/pvont#Relay
 :Relay rdf:type owl:Class ;
        rdfs:subClassOf :Switch .
 
 
-###  http://www.semanticweb.org/pvont#Resistor
+###  https://purl.org/pvont#Resistor
 :Resistor rdf:type owl:Class ;
           rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#Scheduling
+###  https://purl.org/pvont#Scheduling
 :Scheduling rdf:type owl:Class ;
             rdfs:subClassOf :Function .
 
 
-###  http://www.semanticweb.org/pvont#Sensor
+###  https://purl.org/pvont#Sensor
 :Sensor rdf:type owl:Class ;
         rdfs:subClassOf :CPSDevice .
 
 
-###  http://www.semanticweb.org/pvont#Shunt
+###  https://purl.org/pvont#Shunt
 :Shunt rdf:type owl:Class ;
        rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#SingleAxisTracker
+###  https://purl.org/pvont#SingleAxisTracker
 :SingleAxisTracker rdf:type owl:Class ;
                    rdfs:subClassOf :SunTracker .
 
 
-###  http://www.semanticweb.org/pvont#Subsystem
+###  https://purl.org/pvont#Subsystem
 :Subsystem rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#SunTracker
+###  https://purl.org/pvont#SunTracker
 :SunTracker rdf:type owl:Class ;
             rdfs:subClassOf :ActiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#Switch
+###  https://purl.org/pvont#Switch
 :Switch rdf:type owl:Class ;
         rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#Tag
+###  https://purl.org/pvont#Tag
 :Tag rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/pvont#TemperatureSensor
+###  https://purl.org/pvont#TemperatureSensor
 :TemperatureSensor rdf:type owl:Class ;
                    rdfs:subClassOf :MeasurementDevice .
 
 
-###  http://www.semanticweb.org/pvont#Terminal
+###  https://purl.org/pvont#Terminal
 :Terminal rdf:type owl:Class ;
           rdfs:subClassOf :ElectricalTerm ,
                           [ rdf:type owl:Restriction ;
@@ -1042,7 +1086,7 @@
                           ] .
 
 
-###  http://www.semanticweb.org/pvont#TerminalBlock
+###  https://purl.org/pvont#TerminalBlock
 :TerminalBlock rdf:type owl:Class ;
                rdfs:subClassOf :ElectricalTerm ,
                                [ rdf:type owl:Restriction ;
@@ -1051,33 +1095,33 @@
                                ] .
 
 
-###  http://www.semanticweb.org/pvont#TerminalTypes
+###  https://purl.org/pvont#TerminalTypes
 :TerminalTypes rdf:type owl:Class ;
                rdfs:subClassOf :ElectricalTerm .
 
 
-###  http://www.semanticweb.org/pvont#Transformer
+###  https://purl.org/pvont#Transformer
 :Transformer rdf:type owl:Class ;
              rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#UtilityInteractiveInverter
+###  https://purl.org/pvont#UtilityInteractiveInverter
 :UtilityInteractiveInverter rdf:type owl:Class ;
                             rdfs:subClassOf :Inverter ;
                             rdfs:comment "An inverter that can function only when tied to the utility grid, and uses the prevailing line-voltage frequency on the utility line as a control parameter to ensure that the photovoltaic system's output is fully synchronized with the utility power." .
 
 
-###  http://www.semanticweb.org/pvont#Varistor
+###  https://purl.org/pvont#Varistor
 :Varistor rdf:type owl:Class ;
           rdfs:subClassOf :PassiveComponent .
 
 
-###  http://www.semanticweb.org/pvont#Voltmeter
+###  https://purl.org/pvont#Voltmeter
 :Voltmeter rdf:type owl:Class ;
            rdfs:subClassOf :MeasurementDevice .
 
 
-###  http://www.semanticweb.org/pvont#WindSpeedSensor
+###  https://purl.org/pvont#WindSpeedSensor
 :WindSpeedSensor rdf:type owl:Class ;
                  rdfs:subClassOf :MeasurementDevice .
 
@@ -1086,377 +1130,412 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/pvont#activePower
+###  https://purl.org/pvont#activePower
 :activePower rdf:type owl:NamedIndividual ,
                       :Measurement .
 
 
-###  http://www.semanticweb.org/pvont#aluminium
+###  https://purl.org/pvont#aluminium
 :aluminium rdf:type owl:NamedIndividual ,
                     :ConductorMaterialType .
 
 
-###  http://www.semanticweb.org/pvont#ampere
+###  https://purl.org/pvont#ampere
 :ampere rdf:type owl:NamedIndividual ,
                  :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#ampere-hour
+###  https://purl.org/pvont#ampere-hour
 :ampere-hour rdf:type owl:NamedIndividual ,
                       :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#anode
+###  https://purl.org/pvont#anode
 :anode rdf:type owl:NamedIndividual ,
                 :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#battery
+###  https://purl.org/pvont#battery
 :battery rdf:type owl:NamedIndividual ,
                   :Tag ,
                   :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#capacitive
+###  https://purl.org/pvont#breaker
+:breaker rdf:type owl:NamedIndividual ,
+                  :FuseType .
+
+
+###  https://purl.org/pvont#capacitive
 :capacitive rdf:type owl:NamedIndividual ,
                      :LoadType .
 
 
-###  http://www.semanticweb.org/pvont#cathode
+###  https://purl.org/pvont#cathode
 :cathode rdf:type owl:NamedIndividual ,
                   :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#charge
+###  https://purl.org/pvont#charge
 :charge rdf:type owl:NamedIndividual ,
                  :Measurement .
 
 
-###  http://www.semanticweb.org/pvont#charging
+###  https://purl.org/pvont#charging
 :charging rdf:type owl:NamedIndividual ,
                    :BatteryOperationState .
 
 
-###  http://www.semanticweb.org/pvont#communication
+###  https://purl.org/pvont#communication
 :communication rdf:type owl:NamedIndividual ,
                         :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#controller
+###  https://purl.org/pvont#controller
 :controller rdf:type owl:NamedIndividual ,
                      :Tag .
 
 
-###  http://www.semanticweb.org/pvont#copper
+###  https://purl.org/pvont#copper
 :copper rdf:type owl:NamedIndividual ,
                  :ConductorMaterialType .
 
 
-###  http://www.semanticweb.org/pvont#coulomb
+###  https://purl.org/pvont#coulomb
 :coulomb rdf:type owl:NamedIndividual ,
                   :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#current
+###  https://purl.org/pvont#current
 :current rdf:type owl:NamedIndividual ,
                   :Measurement ,
                   :Tag .
 
 
-###  http://www.semanticweb.org/pvont#deepDischarge
+###  https://purl.org/pvont#deepDischarge
 :deepDischarge rdf:type owl:NamedIndividual ,
                         :BatteryOperationState .
 
 
-###  http://www.semanticweb.org/pvont#degree-celsius
+###  https://purl.org/pvont#degree-celsius
 :degree-celsius rdf:type owl:NamedIndividual ,
                          :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#discharging
+###  https://purl.org/pvont#discharging
 :discharging rdf:type owl:NamedIndividual ,
                       :BatteryOperationState .
 
 
-###  http://www.semanticweb.org/pvont#earth
+###  https://purl.org/pvont#earth
 :earth rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/pvont#earthing
+###  https://purl.org/pvont#earthing
 :earthing rdf:type owl:NamedIndividual ,
                    :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#equalization
+###  https://purl.org/pvont#equalization
 :equalization rdf:type owl:NamedIndividual ,
                        :BatteryOperationState ;
               rdfs:comment "The process of restoring all cells in a battery to an equal state-of-charge. Some battery types may require a complete discharge as a part of the equalization process." .
 
 
-###  http://www.semanticweb.org/pvont#fixedTiltArray
+###  https://purl.org/pvont#facade
+:facade rdf:type owl:NamedIndividual ,
+                 :PanelLocation .
+
+
+###  https://purl.org/pvont#fixedTiltArray
 :fixedTiltArray rdf:type owl:NamedIndividual ,
                          :PVAttributes .
 
 
-###  http://www.semanticweb.org/pvont#flatPlateArray
+###  https://purl.org/pvont#flatPlateArray
 :flatPlateArray rdf:type owl:NamedIndividual ,
                          :PVAttributes .
 
 
-###  http://www.semanticweb.org/pvont#floatService
+###  https://purl.org/pvont#floatService
 :floatService rdf:type owl:NamedIndividual ,
                        :BatteryOperationState ;
               rdfs:comment "A battery operation in which the battery is normally connected to an external current source; for instance, a battery charger which supplies the battery load< under normal conditions, while also providing enough energy input to the battery to make up for its internal quiescent losses, thus keeping the battery always up to full power and ready for service." .
 
 
-###  http://www.semanticweb.org/pvont#gridConnectedSystem
+###  https://purl.org/pvont#gridConnectedSystem
 :gridConnectedSystem rdf:type owl:NamedIndividual ,
                               :PVAttributes .
 
 
-###  http://www.semanticweb.org/pvont#ground
+###  https://purl.org/pvont#ground
 :ground rdf:type owl:NamedIndividual ,
                  :Polarity .
 
 
-###  http://www.semanticweb.org/pvont#idle
+###  https://purl.org/pvont#idle
 :idle rdf:type owl:NamedIndividual ,
                :BatteryOperationState .
 
 
-###  http://www.semanticweb.org/pvont#impedance
+###  https://purl.org/pvont#impedance
 :impedance rdf:type owl:NamedIndividual ,
                     :Measurement .
 
 
-###  http://www.semanticweb.org/pvont#inductive
+###  https://purl.org/pvont#indoor
+:indoor rdf:type owl:NamedIndividual ,
+                 :PanelLocation .
+
+
+###  https://purl.org/pvont#inductive
 :inductive rdf:type owl:NamedIndividual ,
                     :LoadType .
 
 
-###  http://www.semanticweb.org/pvont#input
+###  https://purl.org/pvont#input
 :input rdf:type owl:NamedIndividual ,
                 :CurrentDirection ,
                 :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#irradiance
+###  https://purl.org/pvont#irradiance
 :irradiance rdf:type owl:NamedIndividual ,
                      :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#irradiation
+###  https://purl.org/pvont#irradiation
 :irradiation rdf:type owl:NamedIndividual ,
                       :Measurement ,
                       :Tag .
 
 
-###  http://www.semanticweb.org/pvont#live
+###  https://purl.org/pvont#live
 :live rdf:type owl:NamedIndividual ,
                :Polarity ,
                :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#load
+###  https://purl.org/pvont#load
 :load rdf:type owl:NamedIndividual ,
                :Tag ,
                :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#monocrystalline
+###  https://purl.org/pvont#monocrystalline
 :monocrystalline rdf:type owl:NamedIndividual ,
                           :PVAttributes .
 
 
-###  http://www.semanticweb.org/pvont#negative
+###  https://purl.org/pvont#negative
 :negative rdf:type owl:NamedIndividual ,
                    :Polarity ,
                    :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#neutral
+###  https://purl.org/pvont#neutral
 :neutral rdf:type owl:NamedIndividual ,
                   :Polarity ,
                   :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#ohms
+###  https://purl.org/pvont#ohms
 :ohms rdf:type owl:NamedIndividual ,
                :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#output
+###  https://purl.org/pvont#onground
+:onground rdf:type owl:NamedIndividual ,
+                   :PanelLocation .
+
+
+###  https://purl.org/pvont#output
 :output rdf:type owl:NamedIndividual ,
                  :CurrentDirection ,
                  :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#overcharge
+###  https://purl.org/pvont#overcharge
 :overcharge rdf:type owl:NamedIndividual ,
                      :BatteryOperationState .
 
 
-###  http://www.semanticweb.org/pvont#parallel
+###  https://purl.org/pvont#parallel
 :parallel rdf:type owl:NamedIndividual ,
                    :CircuitType .
 
 
-###  http://www.semanticweb.org/pvont#polycrystalline
+###  https://purl.org/pvont#polycrystalline
 :polycrystalline rdf:type owl:NamedIndividual ,
                           :PVAttributes .
 
 
-###  http://www.semanticweb.org/pvont#positive
+###  https://purl.org/pvont#positive
 :positive rdf:type owl:NamedIndividual ,
                    :Polarity ,
                    :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#power
+###  https://purl.org/pvont#power
 :power rdf:type owl:NamedIndividual ,
                 :Measurement ,
                 :Tag .
 
 
-###  http://www.semanticweb.org/pvont#powerFactor
+###  https://purl.org/pvont#powerFactor
 :powerFactor rdf:type owl:NamedIndividual ,
                       :Measurement .
 
 
-###  http://www.semanticweb.org/pvont#powerInput
+###  https://purl.org/pvont#powerInput
 :powerInput rdf:type owl:NamedIndividual ,
                      :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#powerOutput
+###  https://purl.org/pvont#powerOutput
 :powerOutput rdf:type owl:NamedIndividual ,
                       :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#pvThermalSystem
+###  https://purl.org/pvont#pvThermalSystem
 :pvThermalSystem rdf:type owl:NamedIndividual ,
                           :PVAttributes .
 
 
-###  http://www.semanticweb.org/pvont#pv_panel
+###  https://purl.org/pvont#pv_panel
 :pv_panel rdf:type owl:NamedIndividual ,
                    :Tag .
 
 
-###  http://www.semanticweb.org/pvont#pvarray
+###  https://purl.org/pvont#pvarray
 :pvarray rdf:type owl:NamedIndividual ,
                   :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#reactivePower
+###  https://purl.org/pvont#reactivePower
 :reactivePower rdf:type owl:NamedIndividual ,
                         :Measurement .
 
 
-###  http://www.semanticweb.org/pvont#resistance
+###  https://purl.org/pvont#resistance
 :resistance rdf:type owl:NamedIndividual ,
                      :Measurement .
 
 
-###  http://www.semanticweb.org/pvont#resistive
+###  https://purl.org/pvont#resistive
 :resistive rdf:type owl:NamedIndividual ,
                     :LoadType .
 
 
-###  http://www.semanticweb.org/pvont#series
+###  https://purl.org/pvont#roofslope
+:roofslope rdf:type owl:NamedIndividual ,
+                    :PanelLocation .
+
+
+###  https://purl.org/pvont#rooftop
+:rooftop rdf:type owl:NamedIndividual ,
+                  :PanelLocation .
+
+
+###  https://purl.org/pvont#series
 :series rdf:type owl:NamedIndividual ,
                  :CircuitType .
 
 
-###  http://www.semanticweb.org/pvont#seriesController
+###  https://purl.org/pvont#seriesController
 :seriesController rdf:type owl:NamedIndividual ,
                            :ChargeControlStrategy ;
                   rdfs:comment "A charge controller that interrupts the charging current by open-circuiting the photovoltaic (PV) array. The control element is in series with the PV array and battery." .
 
 
-###  http://www.semanticweb.org/pvont#seriesRegulator
+###  https://purl.org/pvont#seriesRegulator
 :seriesRegulator rdf:type owl:NamedIndividual ,
                           :ChargeControlStrategy ;
                  rdfs:comment "Type of battery charge regulator where the charging current is controlled by a switch connected in series with the photovoltaic module or array." .
 
 
-###  http://www.semanticweb.org/pvont#shuntController
+###  https://purl.org/pvont#shuntController
 :shuntController rdf:type owl:NamedIndividual ,
                           :ChargeControlStrategy ;
                  rdfs:comment "A charge controller that redirects or shunts the charging current away from the battery. The controller requires a large heat sink to dissipate the current from the short-circuited photovoltaic array. Most shunt controllers are for smaller systems producing 30 amperes or less." .
 
 
-###  http://www.semanticweb.org/pvont#shuntRegulator
+###  https://purl.org/pvont#shuntRegulator
 :shuntRegulator rdf:type owl:NamedIndividual ,
                          :ChargeControlStrategy ;
                 rdfs:comment "Type of a battery charge regulator where the charging current is controlled by a switch connected in parallel with the photovoltaic (PV) generator. Shorting the PV generator prevents overcharging of the battery." .
 
 
-###  http://www.semanticweb.org/pvont#signalInput
+###  https://purl.org/pvont#signalInput
 :signalInput rdf:type owl:NamedIndividual ,
                       :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#signalOutput
+###  https://purl.org/pvont#signalOutput
 :signalOutput rdf:type owl:NamedIndividual ,
                        :TerminalTypes .
 
 
-###  http://www.semanticweb.org/pvont#singlePhase
+###  https://purl.org/pvont#singlePhase
 :singlePhase rdf:type owl:NamedIndividual ,
                       :CircuitType .
 
 
-###  http://www.semanticweb.org/pvont#singleStateController
+###  https://purl.org/pvont#singleStateController
 :singleStateController rdf:type owl:NamedIndividual ,
                                 :ChargeControlStrategy ;
                        rdfs:comment "A charge controller that redirects all charging current as the battery nears full state-of-charge." .
 
 
-###  http://www.semanticweb.org/pvont#solid
+###  https://purl.org/pvont#slowBlowFuse
+:slowBlowFuse rdf:type owl:NamedIndividual ,
+                       :FuseType .
+
+
+###  https://purl.org/pvont#solid
 :solid rdf:type owl:NamedIndividual ,
                 :ConductorMaterialType .
 
 
-###  http://www.semanticweb.org/pvont#stranded
+###  https://purl.org/pvont#stranded
 :stranded rdf:type owl:NamedIndividual ,
                    :ConductorMaterialType .
 
 
-###  http://www.semanticweb.org/pvont#temperature
+###  https://purl.org/pvont#temperature
 :temperature rdf:type owl:NamedIndividual ,
                       :Measurement ,
                       :Tag .
 
 
-###  http://www.semanticweb.org/pvont#threePhase
+###  https://purl.org/pvont#threePhase
 :threePhase rdf:type owl:NamedIndividual ,
                      :CircuitType .
 
 
-###  http://www.semanticweb.org/pvont#trickleCharge
+###  https://purl.org/pvont#trickleCharge
 :trickleCharge rdf:type owl:NamedIndividual ,
                         :BatteryOperationState ;
                rdfs:comment "A charge at a low rate, balancing through self-discharge losses, to maintain a" .
 
 
-###  http://www.semanticweb.org/pvont#voltage
+###  https://purl.org/pvont#voltage
 :voltage rdf:type owl:NamedIndividual ,
                   :Measurement ,
                   :Tag .
 
 
-###  http://www.semanticweb.org/pvont#volts
+###  https://purl.org/pvont#volts
 :volts rdf:type owl:NamedIndividual ,
                 :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#watt-hour
+###  https://purl.org/pvont#watt-hour
 :watt-hour rdf:type owl:NamedIndividual ,
                     :MeasurementUnits .
 
 
-###  http://www.semanticweb.org/pvont#watts
+###  https://purl.org/pvont#watts
 :watts rdf:type owl:NamedIndividual ,
                 :MeasurementUnits .
 
@@ -1469,57 +1548,57 @@
 
 :v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+:t2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 :m1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :m2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :t1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:t2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment ""^^xsd:string ;
    rdfs:label "ParallelPV"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PVModule ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m1
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPolarity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t2 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :negative
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :PVModule ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m2
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m1
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :m1 ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :t1
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :PVModule ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :m2
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :m2 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :connectedTo ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :t2
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :connectedTo ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :t2
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :m1 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :t1
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPolarity ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :positive
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :m2 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :t2
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPolarity ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :t2 ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :negative
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :positive
                                                                                                                        ] ;
                                                                                                              rdf:rest rdf:nil
                                                                                                            ]
@@ -1544,44 +1623,44 @@
    rdfs:label "SeriesPV"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PVModule ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m1
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPolarity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t2 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :negative
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :PVModule ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m2
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m1
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :m1 ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :t1
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :PVModule ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :m2
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :m2 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :connectedTo ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :t2
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :connectedTo ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :t2
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :m1 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :t1
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPolarity ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :positive
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTerminal ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :m2 ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :t2
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPolarity ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :t2 ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :negative
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :t1 ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :positive
                                                                                                                        ] ;
                                                                                                              rdf:rest rdf:nil
                                                                                                            ]
@@ -1606,15 +1685,15 @@
    rdfs:label "TotalVoltage"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Battery ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :b
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :nominalVoltage ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :v
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :nominalVoltage ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Battery ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :b
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
