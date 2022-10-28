@@ -1,4 +1,5 @@
 @prefix : <http://www.semanticweb.org/pvont/example/installation-2#> .
+@prefix pvont : <https://purl.org/pvont#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,7 +8,7 @@
 @base <http://www.semanticweb.org/pvont/example/installation-2> .
 
 <http://www.semanticweb.org/pvont/example/installation-2> rdf:type owl:Ontology ;
-                                                           owl:imports <http://www.semanticweb.org/pvont> .
+                                                           owl:imports <https://purl.org/pvont> .
 
 #################################################################
 #    Individuals
@@ -15,47 +16,47 @@
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_battery_1
 :inst_battery_1 rdf:type owl:NamedIndividual ,
-                         <http://www.semanticweb.org/pvont#LeadAcidBattery> ;
-                <http://www.semanticweb.org/pvont#hasTerminal> :inst_battery_1_term_negative ,
+                         pvont:LeadAcidBattery ;
+                pvont:hasTerminal :inst_battery_1_term_negative ,
                                                                :inst_battery_1_term_positive ;
-                <http://www.semanticweb.org/pvont#batteryCapacity> 7 ;
-                <http://www.semanticweb.org/pvont#batteryVoltageNominal> 12 .
+                pvont:batteryCapacity 7 ;
+                pvont:batteryVoltageNominal 12 .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_battery_1_term_negative
 :inst_battery_1_term_negative rdf:type owl:NamedIndividual ,
-                                       <http://www.semanticweb.org/pvont#Terminal> ;
-                              <http://www.semanticweb.org/pvont#hasPolarity> <http://www.semanticweb.org/pvont#negative> .
+                                       pvont:Terminal ;
+                              pvont:hasPolarity pvont:negative .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_battery_1_term_positive
 :inst_battery_1_term_positive rdf:type owl:NamedIndividual ,
-                                       <http://www.semanticweb.org/pvont#Terminal> ;
-                              <http://www.semanticweb.org/pvont#hasPolarity> <http://www.semanticweb.org/pvont#positive> .
+                                       pvont:Terminal ;
+                              pvont:hasPolarity pvont:positive .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_battery_fuse_1
 :inst_battery_fuse_1 rdf:type owl:NamedIndividual ,
-                              <http://www.semanticweb.org/pvont#Fuse> ;
-                     <http://www.semanticweb.org/pvont#hasTerminal> :inst_battery_fuse_1_term_1 ,
+                              pvont:Fuse ;
+                     pvont:hasTerminal :inst_battery_fuse_1_term_1 ,
                                                                     :inst_battery_fuse_1_term_2 ;
-                     <http://www.semanticweb.org/pvont#hasCurrent> 5 .
+                     pvont:hasCurrent 5 .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_battery_fuse_1_term_1
 :inst_battery_fuse_1_term_1 rdf:type owl:NamedIndividual ,
-                                     <http://www.semanticweb.org/pvont#Terminal> .
+                                     pvont:Terminal .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_battery_fuse_1_term_2
 :inst_battery_fuse_1_term_2 rdf:type owl:NamedIndividual ,
-                                     <http://www.semanticweb.org/pvont#Terminal> .
+                                     pvont:Terminal .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_controller_1
 :inst_controller_1 rdf:type owl:NamedIndividual ,
-                            <http://www.semanticweb.org/pvont#PWMController> ;
-                   <http://www.semanticweb.org/pvont#hasTerminal> :inst_controller_1_term_bat_negative ,
+                            pvont:PWMController ;
+                   pvont:hasTerminal :inst_controller_1_term_bat_negative ,
                                                                   :inst_controller_1_term_bat_positive ,
                                                                   :inst_controller_1_term_input_negative ,
                                                                   :inst_controller_1_term_input_postive .
@@ -63,46 +64,46 @@
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_controller_1_term_bat_negative
 :inst_controller_1_term_bat_negative rdf:type owl:NamedIndividual ,
-                                              <http://www.semanticweb.org/pvont#Terminal> .
+                                              pvont:Terminal .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_controller_1_term_bat_positive
 :inst_controller_1_term_bat_positive rdf:type owl:NamedIndividual ,
-                                              <http://www.semanticweb.org/pvont#Terminal> .
+                                              pvont:Terminal .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_controller_1_term_input_negative
 :inst_controller_1_term_input_negative rdf:type owl:NamedIndividual ,
-                                                <http://www.semanticweb.org/pvont#Terminal> ;
-                                       <http://www.semanticweb.org/pvont#connectedTo> :inst_panel_1_term_negative .
+                                                pvont:Terminal ;
+                                       pvont:connectedTo :inst_panel_1_term_negative .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_controller_1_term_input_postive
 :inst_controller_1_term_input_postive rdf:type owl:NamedIndividual ,
-                                               <http://www.semanticweb.org/pvont#Terminal> ;
-                                      <http://www.semanticweb.org/pvont#connectedTo> :inst_panel_1_term_positive .
+                                               pvont:Terminal ;
+                                      pvont:connectedTo :inst_panel_1_term_positive .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_panel_1
 :inst_panel_1 rdf:type owl:NamedIndividual ,
-                       <http://www.semanticweb.org/pvont#PVModule> ;
-              <http://www.semanticweb.org/pvont#hasTerminal> :inst_panel_1_term_negative ,
+                       pvont:PVModule ;
+              pvont:hasTerminal :inst_panel_1_term_negative ,
                                                              :inst_panel_1_term_positive ;
-              <http://www.semanticweb.org/pvont#pvMppCurrent> 2.64 ;
-              <http://www.semanticweb.org/pvont#pvMppVoltage> 12.4 ;
-              <http://www.semanticweb.org/pvont#pvRatedPower> 40 .
+              pvont:pvMppCurrent 2.64 ;
+              pvont:pvMppVoltage 12.4 ;
+              pvont:pvRatedPower 40 .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_panel_1_term_negative
 :inst_panel_1_term_negative rdf:type owl:NamedIndividual ,
-                                     <http://www.semanticweb.org/pvont#Terminal> ;
-                            <http://www.semanticweb.org/pvont#hasPolarity> <http://www.semanticweb.org/pvont#negative> .
+                                     pvont:Terminal ;
+                            pvont:hasPolarity pvont:negative .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_panel_1_term_positive
 :inst_panel_1_term_positive rdf:type owl:NamedIndividual ,
-                                     <http://www.semanticweb.org/pvont#Terminal> ;
-                            <http://www.semanticweb.org/pvont#hasPolarity> <http://www.semanticweb.org/pvont#positive> .
+                                     pvont:Terminal ;
+                            pvont:hasPolarity pvont:positive .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
