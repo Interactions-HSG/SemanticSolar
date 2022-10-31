@@ -2,7 +2,7 @@
   "@context": "https://www.w3.org/2019/wot/td/v1",
   "title": "PV Panel",
   "id": "urn:td_inst_panel_1",
-  "base": "https://semantix.siemens-bt.net:1981/pv-installation-2/",
+  "base": "https://semantix.siemens-bt.net:1881/solar/",
   "description": "Photovoltaic installation for research purpose",
   "securityDefinitions": {
     "nosec_sc": {
