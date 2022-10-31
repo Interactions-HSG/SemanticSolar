@@ -122,10 +122,25 @@
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_controller_1_termblock_load
 :inst_controller_1_termblock_load rdf:type owl:NamedIndividual ,
                                            pvont:TerminalBlock ;
+                                  pvont:connectedTo :inst_load_1_actuator ;
                                   pvont:hasTerminal :inst_controller_1_term_load_negative ,
                                                     :inst_controller_1_term_load_positive ;
                                   pvont:hasTerminalType pvont:output ,
                                                         pvont:power .
+
+
+###  http://www.semanticweb.org/pvont/example/installation-2#inst_load_1
+:inst_load_1 rdf:type owl:NamedIndividual ,
+                      pvont:Load ;
+             pvont:usesFunction pvont:resistive ;
+             pvont:ratedPower 12 ;
+             pvont:ratedVoltage 12 .
+
+
+###  http://www.semanticweb.org/pvont/example/installation-2#inst_load_1_actuator
+:inst_load_1_actuator rdf:type owl:NamedIndividual ,
+                               pvont:Actuator ;
+                      pvont:connectedTo :inst_load_1 .
 
 
 ###  http://www.semanticweb.org/pvont/example/installation-2#inst_panel_1

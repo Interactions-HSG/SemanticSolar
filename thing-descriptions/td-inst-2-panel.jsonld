@@ -1,0 +1,61 @@
+{
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "title": "PV Panel",
+  "id": "urn:td_inst_panel_1",
+  "base": "https://semantix.siemens-bt.net:1981/pv-installation-2/",
+  "description": "Photovoltaic installation for research purpose",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "panelVoltage": {
+      "title": "panelVoltage",
+      "observable": false,
+      "readOnly": true,
+      "type": "number",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "panelvoltage"
+        }
+      ]
+    },
+    "panelCurrent": {
+      "title": "panelCurrent",
+      "observable": false,
+      "readOnly": true,
+      "description": "Output current in amperes",
+      "type": "number",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "panelcurrent"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+    {
+      "href": "td_inst_2_controller",
+      "rel": "controlledBy",
+      "type": "application/td+json"
+    }
+  ],
+  "forms": [
+    {
+      "op": [
+        "readallproperties"
+      ],
+      "href": "panelmeasurements"
+    }
+  ]
+}
